@@ -23,7 +23,7 @@ def lambda_handler(event, context):
     print(result)
     pred = int(result['predictions'][0]['predicted_label'])
     
-    pred_rounded_by_cutoff = 1 if pred >=0.10575 else 0
+    pred_rounded_by_cutoff = 1 if pred >=0.1027 else 0
     
     if(pred_rounded_by_cutoff == 0):
         return 'Not Readmitted'
